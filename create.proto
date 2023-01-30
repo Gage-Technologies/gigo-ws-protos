@@ -16,6 +16,7 @@ message CreateWorkspaceRequest {
   int32 disk = 6;
   int32 cpu = 7;
   int32 memory = 8;
+  string container = 9;
 }
 
 message CreateWorkspaceResponse {
