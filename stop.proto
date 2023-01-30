@@ -4,6 +4,8 @@ option go_package = "protos/ws";
 
 package ws;
 
+import "types.proto";
+
 message StopWorkspaceRequest {
   // auth is currently unused but we allocate the slot for later
   string auth = 1;
