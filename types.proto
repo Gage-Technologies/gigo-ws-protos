@@ -21,7 +21,7 @@ enum ResponseCode {
   TF_PROVISIONING_FAILURE = 12;
 }
 
-message ProvisionSuccess {
+message Success {
   int64 start_time = 1;
   int64 end_time = 2;
   int64 elapsed_time = 3;

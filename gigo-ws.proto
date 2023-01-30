@@ -14,5 +14,15 @@ service GigoWS {
   // CreateWorkspace
   //
   //  Provisions a new workspace from scratch
-  rpc CreateWorkspace() returns () {}
+  rpc CreateWorkspace(CreateWorkspaceRequest) returns (CreateWorkspaceResponse) {}
+
+  // StopWorkspace
+  //
+  //  Stops a running workspace but preserves the terraform state
+  rpc StopWorkspace(StopWorkspaceRequest) returns (StopWorkspaceResponse) {}
+
+  // DestroyWorkspace
+  //
+  //  Destroys an existing workspace
+  rpc DestroyWorkspace(DestroyWorkspaceRequest) returns (DestroyWorkspaceResponse) {}
 }
