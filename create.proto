@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option go_package = "protos/ws";
+
+package ws;
+
+import "types.proto";
+
+message CreateWorkspaceRequest {
+  // auth is currently unused but we allocate the slot for later
+  string auth = 1;
+  int64 workspace_id = 2;
+  int64 owner_id = 3;
+  string owner_email = 4;
+  string owner_name = 5;
+  int32 disk = 6;
+  int32 cpu = 7;
+  int32 memory = 8;
+}
+
+message CreateWorkspaceResponse {
+  ResponseCode status = 1;
+  Success success = 2;
+  Error error = 3;
+  int64 agent_id = 4;
+  string agent_token = 5;
+}

@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option go_package = "protos/ws";
+
+package ws;
+
+// response code to give success & failure context
+enum ResponseCode {
+  SUCCESS = 0;
+  SUCCESS_STREAM_COMPLETE = 1;
+  FAILED_AUTHENTICATION = 2;
+  FAILED_AUTHORIZATION = 3;
+  MALFORMED_REQUEST = 4;
+  SERVICE_BLOCK = 5;
+  SERVER_EXECUTION_ERROR = 6;
+  CLIENT_STREAM_FAILURE = 7;
+  SERVER_STREAM_FAILURE = 8;
+  NOT_FOUND = 9;
+  TF_INIT_FAILURE = 10;
+  TF_VALIDATION_ERROR = 11;
+  TF_PROVISIONING_FAILURE = 12;
+}
+
+message ProvisionSuccess {
+  int64 start_time = 1;
+  int64 end_time = 2;
+  int64 elapsed_time = 3;
+}
+
+message CommandError {
+  int32 exit_code = 1;
+  string stdout = 2;
+  string stderr = 3;
+  int64 start_time = 4;
+  int64 end_time = 5;
+  int64 elapsed_time = 6;
+}
+
+message Error {
+  CommandError cmd_error = 2;
+  string go_error = 3;
+}

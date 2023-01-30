@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "protos/ws";
+
+package ws;
+
+import "create.proto";
+import "stop.proto";
+import "destroy.proto";
+
+service GigoWS {
+  // TODO: add an auth system
+
+  // CreateWorkspace
+  //
+  //  Provisions a new workspace from scratch
+  rpc CreateWorkspace() returns () {}
+}
