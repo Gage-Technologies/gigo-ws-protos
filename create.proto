@@ -17,6 +17,7 @@ message CreateWorkspaceRequest {
   int32 cpu = 7;
   int32 memory = 8;
   string container = 9;
+  string access_url = 10;
 }
 
 message CreateWorkspaceResponse {
