@@ -5,6 +5,7 @@ option go_package = "protos/ws";
 package ws;
 
 import "create.proto";
+import "start.proto";
 import "stop.proto";
 import "destroy.proto";
 
@@ -15,6 +16,11 @@ service GigoWS {
   //
   //  Provisions a new workspace from scratch
   rpc CreateWorkspace(CreateWorkspaceRequest) returns (CreateWorkspaceResponse) {}
+
+  // StartWorkspace
+  //
+  //  Starts an existing workspace that is currently stopped
+  rpc StartWorkspace(StartWorkspaceRequest) returns (StartWorkspaceResponse) {}
 
   // StopWorkspace
   //
