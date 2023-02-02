@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "protos/ws";
+
+package ws;
+
+import "types.proto";
+
+message EchoRequest {
+  // auth is currently unused but we allocate the slot for later
+  string auth = 1;
+  string echo = 2;
+}
+
+message EchoResponse {
+  ResponseCode status = 1;
+  string echo = 2;
+}

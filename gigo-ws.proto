@@ -8,9 +8,15 @@ import "create.proto";
 import "start.proto";
 import "stop.proto";
 import "destroy.proto";
+import "echo.proto";
 
 service GigoWS {
   // TODO: add an auth system
+
+  // Echo
+  //
+  //  Echos the passed message
+  rpc Echo(EchoRequest) returns (EchoResponse) {}
 
   // CreateWorkspace
   //
