@@ -19,6 +19,7 @@ enum ResponseCode {
   TF_INIT_FAILURE = 10;
   TF_VALIDATION_ERROR = 11;
   TF_PROVISIONING_FAILURE = 12;
+  ALTERNATIVE_REQUEST_ACTIVE = 13;
 }
 
 message Success {
