@@ -9,6 +9,7 @@ import "start.proto";
 import "stop.proto";
 import "destroy.proto";
 import "echo.proto";
+import "utilization.proto";
 
 service GigoWS {
   // TODO: add an auth system
@@ -37,4 +38,9 @@ service GigoWS {
   //
   //  Destroys an existing workspace
   rpc DestroyWorkspace(DestroyWorkspaceRequest) returns (DestroyWorkspaceResponse) {}
+
+  // GetResourceUtil
+  //
+  //  Retrieves the resource utilization of a workspace
+  rpc GetResourceUtil(GetResourceUtilRequest) returns (GetResourceUtilResponse) {}
 }
