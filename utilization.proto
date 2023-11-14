@@ -19,4 +19,8 @@ message GetResourceUtilResponse {
   Error error = 3;
   double cpu = 4;
   double memory = 5;
+  int64 cpu_limit = 6;
+  int64 memory_limit = 7;
+  int64 cpu_usage = 8;
+  int64 memory_usage = 9;
 }
